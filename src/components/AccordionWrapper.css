@@ -1,0 +1,42 @@
+.AccordeonsItem {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.AccordeonsItemTitle {
+    padding: 10px;
+    background-color: rgb(228, 100, 75);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.AccordeonsItemTitle::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 20px;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+.AccordeonsItemContent {
+     padding: 0 10px;
+    position: relative;
+    background-color: rgb(74, 64, 65);
+    color: #ccc;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.AccordeonsItem.active .AccordeonsItemContent {
+    height: 200px;
+}
+
+.AccordeonsItem.active .AccordeonsItemTitle::before {
+    content: '-';
+}
+

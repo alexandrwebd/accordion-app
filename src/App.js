@@ -1,12 +1,16 @@
-
+import React from 'react'
+import {AccordionWrapper} from './components/AccordionWrapper'
 import './App.css';
+import {AccordionState} from "./context/accordion/accordionState";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
-  );
+      <AccordionState >
+        <div className="App">
+          <AccordionWrapper />
+        </div>
+      </AccordionState>
+  )
 }
 
 export default App;
